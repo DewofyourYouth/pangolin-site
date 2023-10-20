@@ -1,11 +1,16 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
-title = 'Pangolin'
+title = 'Pangolin Software Solutions'
 theme = "blowfish"
 
+mainSections = ["posts"]
+smartTOC = true
+
 [author]
-name = "Jacob Shore"
-image = "img/author.jpg"
-headline = "The man for the job."
-bio = "I'm Jacob."
+name = "Pangolin"
+image = "img/pangolin.svg"
+headline = "Scalable, tested solutions."
+
+[params]
+secondaryLogo = "img/pangolin.png"
 

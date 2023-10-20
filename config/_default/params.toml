@@ -1,0 +1,7 @@
+[homepage]
+layout = "hero"
+homepageImage = "img/cityscape-bg.jpeg"
+showRecent = true
+cardView = true
+
+colorScheme = "neon"
