@@ -1,3 +1,11 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Pangolin'
+theme = "blowfish"
+
+[author]
+name = "Jacob Shore"
+image = "img/author.jpg"
+headline = "The man for the job."
+bio = "I'm Jacob."
+
