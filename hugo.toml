@@ -3,7 +3,7 @@ languageCode = 'en-us'
 title = 'Pangolin Software Solutions'
 theme = "blowfish"
 
-mainSections = ["posts"]
+mainSections = ["blog"]
 smartTOC = true
 
 [author]
