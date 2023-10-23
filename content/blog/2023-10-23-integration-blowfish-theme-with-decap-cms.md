@@ -2,7 +2,7 @@
 title: Integration Blowfish Theme With Decap CMS
 date: 2023-10-23T18:48:39.151Z
 description: A journey in making this blog
-draft: true
+draft: false
 showHero: true
 thumbnail: /img/featured.jpeg
 tags:
