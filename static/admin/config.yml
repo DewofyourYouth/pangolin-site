@@ -23,4 +23,4 @@ collections:
         choose_url: true
         media_library:
           config:
-            multiple: true
+            multiple: false
