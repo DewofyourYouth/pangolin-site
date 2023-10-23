@@ -9,6 +9,8 @@ tags:
   - cms
   - testing
 ---
-This is a test of the CMS posting.
+I am testing the ability to update a post through Decap CMS. 
+
+Can I post and edit a post with Decap CMS? We'll soon see :)
 
 ![A image of paint brushes](/img/featured.jpeg "Brushes")
