@@ -5,6 +5,7 @@ draft: false
 showHero: true
 image: "brushes.jpeg"
 thumbnail: "img/author.jpg"
+showSummary: true
 ---
 
 This is a post!!!
