@@ -2,8 +2,9 @@ baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'Pangolin Software Solutions'
 theme = "blowfish"
+summaryLength = 20
 
-mainSections = ["blog"]
+mainSections = ["blog", "projects"]
 smartTOC = true
 
 [author]
@@ -15,6 +16,6 @@ headline = "Scalable, tested solutions."
 secondaryLogo = "img/pangolin.png"
 
 [taxonomies]
-  tag = "tags"
-  category = "categories"
-  author = "authors"
+tag = "tags"
+category = "categories"
+author = "authors"

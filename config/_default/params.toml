@@ -9,12 +9,17 @@ cardView = true
 cardViewScreenWidth = false
 layoutBackgroundBlur = true
 
-
-
 [header]
 layout = "fixed"
 
 [blog]
+showHero = true
+showSummary = true
+showTableOfContents = true
+showRelatedContent = true
+relatedContentLimit = 3
+
+[projects]
 showHero = true
 showSummary = true
 showTableOfContents = true
