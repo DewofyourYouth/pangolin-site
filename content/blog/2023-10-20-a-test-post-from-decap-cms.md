@@ -5,7 +5,7 @@ description: This Is From Decap
 draft: false
 showHero: true
 showSummary: true
-thumbnail: img/cityscape-bg.jpeg
+thumbnail: /img/featured.jpeg
 ---
 
 Test now
