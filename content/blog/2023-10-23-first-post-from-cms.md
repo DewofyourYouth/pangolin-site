@@ -11,6 +11,12 @@ tags:
 ---
 I am testing the ability to update a post through Decap CMS. 
 
+{{< article link="https://dewofyouryouth.github.io/dew-blog/post/the-mashgiach/" >}}
+
+
+
+
+
 Can I post and edit a post with Decap CMS? We'll soon see :)
 
 ![A image of paint brushes](/img/featured.jpeg "Brushes")
