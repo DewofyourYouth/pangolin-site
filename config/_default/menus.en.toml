@@ -1,0 +1,19 @@
+[[main]]
+name = "About Pangolin"
+pageRef = "about"
+weight = 10
+
+[[main]]
+name = "Services"
+pageRef = "services"
+weight = 15 
+
+[[main]]
+name = "Blog"
+pageRef = "blog"
+weight = 20
+
+[[main]]
+name = "Tags"
+pageRef = "tags"
+weight = 30

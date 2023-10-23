@@ -14,3 +14,7 @@ headline = "Scalable, tested solutions."
 [params]
 secondaryLogo = "img/pangolin.png"
 
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  author = "authors"

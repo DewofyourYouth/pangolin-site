@@ -1,7 +1,27 @@
+colorScheme = "neon"
+defaultAppearance = "dark"
+
 [homepage]
-layout = "hero"
+layout = "background"
 homepageImage = "img/cityscape-bg.jpeg"
 showRecent = true
 cardView = true
+cardViewScreenWidth = false
+layoutBackgroundBlur = true
 
-colorScheme = "neon"
+
+
+[header]
+layout = "fixed"
+
+[blog]
+showHero = true
+showSummary = true
+showTableOfContents = true
+showRelatedContent = true
+relatedContentLimit = 3
+
+[list]
+showCards = true
+groupByYear = false
+cardView = true

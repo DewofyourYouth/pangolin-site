@@ -6,6 +6,8 @@ showHero: true
 image: "brushes.jpeg"
 thumbnail: "img/author.jpg"
 showSummary: true
+showAuthor: false
+tags: ["awesomeness", "posting"]
 ---
 
 This is a post!!!

@@ -1,5 +1,4 @@
 ---
-menu: main
 title: About Pangolin
 ---
 

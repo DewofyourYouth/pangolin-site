@@ -30,3 +30,7 @@ collections:
         media_library:
           config:
             multiple: false
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        default: ["news"]
