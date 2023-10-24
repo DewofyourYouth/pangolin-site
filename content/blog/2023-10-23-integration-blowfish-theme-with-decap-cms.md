@@ -1,7 +1,7 @@
 ---
-title: Integration Blowfish Theme With Decap CMS
-date: 2023-10-23T18:48:39.151Z
-description: A journey in making this blog, Part I
+title: Integrating DecapCMS with Hugo and Blowfish Theme, Part 1
+date: 2023-10-24T16:30:37.705Z
+description: The journey of making this blog ;)
 draft: false
 showHero: true
 thumbnail: /img/blowfish.jpeg
@@ -21,7 +21,7 @@ DecapCMS, formerly NetlifyCMS, is a git based CMS. It offers a web interface to 
 
 {{< github repo="nunocoracao/blowfish" >}}
 
-### Setting Up Thumbnails
+### Choosing The Feature Image 
 
 Many Hugo theme expect you to make a directory for each blog post, and then put the markdown in an `index.md` folder and put whatever featured image you're using for the blog post in that directory. Here is a link to[ how Blowfish says to make a thumbnail](https://blowfish.page/docs/thumbnails/). Basically, they say to make the blog post into a directory and name an image "featured.jpg" or whatever image extension. Like this:
 
@@ -69,3 +69,78 @@ The template does the following:
 2. If there's an image file with the `*feature*` in the name it uses that as the image.
 3. If not it looks for images with cover or thumbnail in the name.
 4. It uses that image with image optimization, unless image optimization has been disabled.
+
+Here are the changes to make it show an image from the asset folder of my choosing.
+
+```go
+{{ $disableImageOptimization := .Page.Site.Params.disableImageOptimization |
+  default false
+}}
+{{ $thumbnail := .Params.thumbnail }}
+{{ $featured := resources.Get $thumbnail }}
+{{- if not $featured }}
+  {{ with .Site.Params.defaultFeaturedImage }}
+    {{ $featured = resources.Get . }}
+  {{ end }}
+{{ end -}}
+{{- with $featured -}}
+  {{ if $disableImageOptimization }}
+    <div
+      class="w-full h-36 md:h-56 lg:h-72 single_hero_basic nozoom"
+      style="background-image:url({{ .RelPermalink }});"
+    ></div>
+  {{ end }}
+{{ else }}
+  {{ with .Resize "1200x" }}
+    <div
+      class="w-full h-36 md:h-56 lg:h-72 single_hero_basic nozoom"
+      style="background-image:url({{ .RelPermalink }});"
+    ></div>
+  {{ end }}
+{{- end -}}
+```
+
+I'm getting the string of whatever appears in my front matter under the key of `thumbnail` and using that to get the image from my `assets` directory. [See the Hugo docs here](https://gohugo.io/content-management/image-processing/#global-resource) to see how `resources.Get` does that. If nothing is set as `thumbnail`, I use the default featured image set for the site.
+
+Here is the config of the DecapCMS admin config.yaml to allow editing the blog post from with a featured image from DecapCMS:
+
+```yaml
+backend:
+  name: git-gateway
+  branch: master
+media_folder: assets/img
+public_folder: /img
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "content/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Draft", name: "draft", widget: "boolean", default: true }
+      - label: "Show Hero"
+        name: "showHero",
+        widget: "boolean",
+        default: true,
+      - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Featured Image"
+        name: "thumbnail"
+        widget: "image"
+        choose_url: true
+        media_library:
+          config:
+            multiple: false
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        default: ["news"]
+```
+
+Now the featured image appearing in the hero section of post will be whatever we set as the featured image in DecapCMS!!! Hurray!!
+
+Now we just have to rinse and repeat wherever else the feature image is set in the theme!
