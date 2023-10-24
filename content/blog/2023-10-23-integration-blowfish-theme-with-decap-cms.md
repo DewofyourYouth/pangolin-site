@@ -34,4 +34,38 @@ content
 
 But DecapCMS makes posts by committing a file. And I want to upload featured images via DecapCMS. I also prefer images that I can reuse based on my needs, I don't want them to be based on a specific location.
 
-So step one is overriding Blowfish's way to find a featured image.
+So step one is overriding Blowfish's way to find a featured image. To override a theme in Hugo, you find the related HTML template in the theme - and you copy it to your `layouts/_default` folder. For example, I discovered that the partial html folder in Blowfish responsible for the featured image in the blog post's hero section is `themes/blowfish/layouts_default/partials/hero/basic.html` so I make a `layouts_default/partials/hero/basic.html` file in my root directory. I copy whatever is in the theme's html - so I can make changes.
+
+This is the contents of the original `basic.html` file:
+
+```go
+{{ $disableImageOptimization := .Page.Site.Params.disableImageOptimization | default false }}
+
+{{- $images := .Resources.ByType "image" -}}
+{{- $featured := $images.GetMatch "*feature*" -}}
+{{- if not $featured }}
+  {{ $featured = $images.GetMatch "{*cover*,*thumbnail*}" }}
+{{ end -}}
+{{- with $featured -}}
+    {{ if $disableImageOptimization }}
+        {{ with . }}
+            <div 
+              class="w-full h-36 md:h-56 lg:h-72 single_hero_basic nozoom" 
+              style="background-image:url({{ .RelPermalink }});"></div>
+        {{ end }}
+    {{ else }}
+        {{ with .Resize "1200x" }}
+            <div 
+              class="w-full h-36 md:h-56 lg:h-72 single_hero_basic nozoom" 
+              style="background-image:url({{ .RelPermalink }});"></div>
+        {{ end }}
+    {{ end }}
+{{- end -}}
+```
+
+The template does the following:
+
+1. Checks for the images in the local directory relative to **current page.** See the [Hugo docs here](https://gohugo.io/content-management/page-resources/) to see how.
+2. If there's an image file with the `*feature*` in the name it uses that as the image.
+3. If not it looks for images with cover or thumbnail in the name.
+4. It uses that image with image optimization, unless image optimization has been disabled.
