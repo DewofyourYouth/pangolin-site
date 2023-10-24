@@ -9,7 +9,7 @@ tags:
   - cms
   - testing
 ---
-I am testing the ability to update a post through Decap CMS. 
+I am testing the ability to update a post through Decap CMS!!!
 
 {{< article link="/about" >}}
 
