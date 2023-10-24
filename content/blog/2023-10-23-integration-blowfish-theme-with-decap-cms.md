@@ -4,7 +4,7 @@ date: 2023-10-23T18:48:39.151Z
 description: A journey in making this blog
 draft: false
 showHero: true
-thumbnail: /img/featured.jpeg
+thumbnail: /img/blowfish.jpeg
 tags:
   - tech
   - blogging
