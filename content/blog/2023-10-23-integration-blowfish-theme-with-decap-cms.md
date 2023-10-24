@@ -1,7 +1,7 @@
 ---
 title: Integration Blowfish Theme With Decap CMS
 date: 2023-10-23T18:48:39.151Z
-description: A journey in making this blog
+description: A journey in making this blog, Part I
 draft: false
 showHero: true
 thumbnail: /img/blowfish.jpeg
@@ -20,3 +20,16 @@ I love how Hugo builds in nano seconds and serves static HTML without extra Java
 DecapCMS, formerly NetlifyCMS, is a git based CMS. It offers a web interface to commit markdown files to my git repo - and generate my site, using Git as the single source of truth. DecapCMS [has instructions for integrating with Hugo](https://decapcms.org/docs/hugo/), but with Hugo there's also a need to integrate with whatever hugo theme your using. I'm using Blowfish theme:
 
 {{< github repo="nunocoracao/blowfish" >}}
+
+### Setting Up Thumbnails
+
+Many Hugo theme expect you to make a directory for each blog post, and then put the markdown in an `index.md` folder and put whatever featured image you're using for the blog post in that directory. Here is a link to[ how Blowfish says to make a thumbnail](https://blowfish.page/docs/thumbnails/). Basically, they say to make the blog post into a directory and name an image "featured.jpg" or whatever image extension. Like this:
+
+```
+content
+└── awesome_article
+    ├── index.md
+    └── featured.png
+```
+
+But DecapCMS makes posts by committing a file. And I want to upload featured images via DecapCMS. I also prefer images that I can reuse based on my needs, I don't want them to be based on a specific location.
