@@ -17,6 +17,6 @@ I love how Hugo builds in seconds and serves static HTML without extra JavaScrip
 
 {{< github repo="decaporg/decap-cms" >}}
 
-DecapCMS, formerly NetlifyCMS, is a git based CMS. It offers a web interface to commit markdown files to my git repo - and generate my site, using Git as the single source of truth. DecapCMS has instructions for integrating with Hugo 
+DecapCMS, formerly NetlifyCMS, is a git based CMS. It offers a web interface to commit markdown files to my git repo - and generate my site, using Git as the single source of truth. DecapCMS [has instructions for integrating with Hugo](https://decapcms.org/docs/hugo/), but with Hugo there's also a need to integrate with whatever hugo theme your using.
 
 {{< github repo="nunocoracao/blowfish" >}}
