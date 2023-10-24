@@ -11,7 +11,7 @@ tags:
   - hugo
   - decapcms
 ---
-This is the story of how I integrated Blowfish theme in Hugo with DecapCMS. 
+This is Part I of the story of how I integrated Blowfish theme in Hugo with DecapCMS. 
 
 I love how Hugo builds in nano seconds and serves static HTML without extra JavaScript or network calls to a database. It offers improved SEO and a better user experience for less work than other blogging solutions, IMHO. What I don't like is that to make changes, I would often need to open up VIM on the computer with my Git repo. I want to be able log into an admin site and make edits and posts from a web browser a la WordPress style. But what I *don't* want is to manage a MySQL instance and keep all my site data in MySQL - or any database for that matter (other than git, technically a database 😅). This is where DecapCMS comes in.
 
