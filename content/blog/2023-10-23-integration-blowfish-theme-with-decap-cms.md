@@ -33,3 +33,5 @@ content
 ```
 
 But DecapCMS makes posts by committing a file. And I want to upload featured images via DecapCMS. I also prefer images that I can reuse based on my needs, I don't want them to be based on a specific location.
+
+So step one is overriding Blowfish's way to find a featured image.
