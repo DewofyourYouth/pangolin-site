@@ -1,5 +1,6 @@
 colorScheme = "neon"
 defaultAppearance = "dark"
+defaultFeaturedImage = "img/pangolin.jpeg"
 
 [homepage]
 layout = "background"

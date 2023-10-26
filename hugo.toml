@@ -4,7 +4,7 @@ title = 'Pangolin Software Solutions'
 theme = "blowfish"
 summaryLength = 20
 
-mainSections = ["blog", "projects"]
+mainSections = ["blog", "project"]
 smartTOC = true
 
 [author]

@@ -1,14 +1,27 @@
 {{ $disableImageOptimization := .Page.Site.Params.disableImageOptimization |
-default false }} {{$thumbnail := .Params.thumbnail}} {{- $featured :=
-resources.Get $thumbnail -}} {{- if not $featured }}{{ $featured = resources.Get
-$thumbnail}}{{ end -}} {{- with $featured -}} {{ if $disableImageOptimization }}
-<div
-  class="w-full h-36 md:h-56 lg:h-72 single_hero_basic nozoom"
-  style="background-image:url({{ .RelPermalink }});"
-></div>
-{{ end }} {{ else }} {{ with .Resize "1200x" }}
-<div
-  class="w-full h-36 md:h-56 lg:h-72 single_hero_basic nozoom"
-  style="background-image:url({{ .RelPermalink }});"
-></div>
-{{ end }} {{- end -}}
+  default false
+}}
+{{ $thumbnail := .Params.thumbnail }}
+{{ $featured := resources.Get $thumbnail }}
+{{- if not $featured }}
+  {{ with
+    .Site.Params.defaultFeaturedImage
+  }}
+    {{ $featured = resources.Get . }}
+  {{ end }}
+{{ end -}}
+{{- with $featured -}}
+  {{ if $disableImageOptimization }}
+    <div
+      class="w-full h-36 md:h-56 lg:h-72 single_hero_basic nozoom"
+      style="background-image:url({{ .RelPermalink }});"
+    ></div>
+  {{ end }}
+{{ else }}
+  {{ with .Resize "1200x" }}
+    <div
+      class="w-full h-36 md:h-56 lg:h-72 single_hero_basic nozoom"
+      style="background-image:url({{ .RelPermalink }});"
+    ></div>
+  {{ end }}
+{{- end -}}
