@@ -1,10 +1,10 @@
-+++
-title = 'A Test Project'
-date = 2023-10-23T20:33:32+03:00
-draft = true
-showSummary = true
-showHero = true
-+++
+---
+title: "A Test Project"
+date: 2023-10-23T20:33:32+03:00
+draft: true
+showSummary: true
+showHero: true
+---
 
 Excepteur esse adipisicing ullamco dolore.
 
