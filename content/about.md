@@ -1,6 +1,9 @@
 ---
 title: About Pangolin
 date: 2023-10-20T11:21:58+03:00
+description: The deets on Pangolin Software Solutions
+draft: false
+showHero: true
 ---
 
 ## About Pangolin
