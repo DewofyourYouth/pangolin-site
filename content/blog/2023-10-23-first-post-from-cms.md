@@ -9,9 +9,12 @@ tags:
   - cms
   - testing
 ---
-I am testing the ability to update a post through Decap CMS. 
 
-{{< article link="/about" >}}
+I am testing the ability to update a post through Decap CMS.
+
+{{< badge >}}
+New article!
+{{< /badge >}}
 
 Can I post and edit a post with Decap CMS? We'll soon see :)
 
