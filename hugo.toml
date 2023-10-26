@@ -12,6 +12,11 @@ smartTOC = true
 name = "Pangolin"
 image = "img/pangolin.svg"
 headline = "Scalable, tested solutions."
+links = [
+    {twitter = "https://twitter.com/JacobShore19"},
+    {linkedin = "https://www.linkedin.com/in/jacob-shore-86094725a"},
+    {github = "https://github.com/DewofyourYouth"}
+]
 
 [params]
 secondaryLogo = "img/pangolin.png"
