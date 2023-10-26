@@ -23,6 +23,10 @@ collections:
           widget: "boolean",
           default: true,
         }
+      - label: "Show Comments"
+        name: "showComments"
+        widget: true
+        default: true
       - { label: "Body", name: "body", widget: "markdown" }
       - label: "Featured Image"
         name: "thumbnail"
