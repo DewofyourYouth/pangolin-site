@@ -27,7 +27,7 @@ collections:
       - label: "Featured Image"
         name: "thumbnail"
         widget: "image"
-        optional: true
+        required: false
         choose_url: true
         media_library:
           config:
@@ -59,7 +59,7 @@ collections:
         name: "thumbnail"
         widget: "image"
         choose_url: true
-        optional: true
+        required: false
         media_library:
           config:
             multiple: false
@@ -90,7 +90,7 @@ collections:
         name: "thumbnail"
         widget: "image"
         choose_url: true
-        optional: true
+        required: false
         media_library:
           config:
             multiple: false
