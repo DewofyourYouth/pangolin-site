@@ -12,10 +12,9 @@ tags:
   - hugo
   - decapcms
 ---
-
 This is Part I of the story of how I integrated Blowfish theme in Hugo with DecapCMS.
 
-I love how Hugo builds in nano seconds and serves static HTML without extra JavaScript or network calls to a database. It offers improved SEO and a better user experience for less work than other blogging solutions, IMHO. What I don't like is that to make changes, I would often need to open up VIM on the computer with my Git repo. I want to be able log into an admin site and make edits and posts from a web browser a la WordPress style. But what I _don't_ want is to manage a MySQL instance and keep all my site data in MySQL - or any database for that matter (other than git, technically a database 😅). This is where DecapCMS comes in.
+I love how Hugo builds in nano seconds and serves static HTML without extra JavaScript or network calls to a database. It offers improved SEO and a better user experience for less work than other blogging solutions, IMHO. What I don't like is that to make changes, I would often need to open up VIM on the computer with my Git repo. I want to be able log into an admin site and make edits and posts from a web browser a la WordPress style. But what I *don't* want is to manage a MySQL instance and keep all my site data in MySQL - or any database for that matter (other than git, technically a database 😅). This is where DecapCMS comes in.
 
 {{< github repo="decaporg/decap-cms" >}}
 
@@ -36,7 +35,7 @@ content
 
 But DecapCMS makes posts by committing a file. And I want to upload featured images via DecapCMS. I also prefer images that I can reuse based on my needs, I don't want them to be based on a specific location.
 
-So step one is overriding Blowfish's way to find a featured image. To override a theme in Hugo, you find the related HTML template in the theme - and you copy it to your `layouts/_default` folder. For example, I discovered that the partial html folder in Blowfish responsible for the featured image in the blog post's hero section is `themes/blowfish/layouts_default/partials/hero/basic.html` so I make a `layouts_default/partials/hero/basic.html` file in my root directory. I copy whatever is in the theme's html - so I can make changes.
+So step one is overriding Blowfish's way to find a featured image. To override a theme in Hugo, you find the related HTML template in the theme - and you copy it to your `layouts/_default` folder. For example, I discovered that the partial html folder in Blowfish responsible for the featured image in the blog post's hero section is `themes/blowfish/layouts_default/partials/hero/basic.html` so I make a `layouts/_default/partials/hero/basic.html` file in my root directory. I copy whatever is in the theme's html - so I can make changes.
 
 This is the contents of the original `basic.html` file:
 
