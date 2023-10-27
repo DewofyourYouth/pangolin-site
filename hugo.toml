@@ -7,6 +7,7 @@ disqusShortname = 'pangolinsoftwaresolutions'
 
 mainSections = ["blog", "project"]
 smartTOC = true
+colorScheme = "neon"
 
 [author]
 name = "Pangolin"
