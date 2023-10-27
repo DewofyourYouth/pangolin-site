@@ -35,7 +35,7 @@ content
 
 But DecapCMS makes posts by committing a file. And I want to upload featured images via DecapCMS. I also prefer images that I can reuse based on my needs, I don't want them to be based on a specific location.
 
-So step one is overriding Blowfish's way to find a featured image. To override a theme in Hugo, you find the related HTML template in the theme - and you copy it to your `layouts/_default` folder. For example, I discovered that the partial html folder in Blowfish responsible for the featured image in the blog post's hero section is `themes/blowfish/layouts_default/partials/hero/basic.html` so I make a `layouts/_default/partials/hero/basic.html` file in my root directory. I copy whatever is in the theme's html - so I can make changes.
+So step one is overriding Blowfish's way to find a featured image. To override a theme in Hugo, you find the related HTML template in the theme - and you copy it to your `layouts/_default` folder. For example, I discovered that the partial html folder in Blowfish responsible for the featured image in the blog post's hero section is `themes/blowfish/layouts/_default/partials/hero/basic.html` so I make a `layouts/_default/partials/hero/basic.html` file in my root directory. I copy whatever is in the theme's html - so I can make changes.
 
 This is the contents of the original `basic.html` file:
 
