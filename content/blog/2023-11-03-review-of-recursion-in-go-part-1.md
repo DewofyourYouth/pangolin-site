@@ -7,7 +7,11 @@ showHero: true
 showComments: true
 thumbnail: /img/russian-dolls.jpeg
 tags:
-  - news
+  - programming
+  - basics
+  - recursion
+  - algorithms
+  - tutorials
 ---
 ### Recursion In Go - Part I
 
