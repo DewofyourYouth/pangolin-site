@@ -17,9 +17,11 @@ This is a basic review of recursion for Go programmers. It was originally writte
 
 #### **Recursion** - A function that calls itself.
 
-Recursive functions must have an exit clause, if they aren't going to be an infinite loop. The exit clause is the condition in which case the function should return a value and *not* call itself. Without one, the function will just call itself forever.
+Recursive functions must have an **exit clause**, if they aren't going to be an infinite loop. The exit clause is the condition in which case the function should return a value and *not* call itself. Without an exit clause, the function will just call itself forever.
 
-Here is a simple recursive function called factorial, as you may expected, it calculates the factorial of an input:
+Recursion has a few key use cases, where back tracking is important, but generally speaking, most things that can just be done with a for loop, should be done with a for loop - as we'll see, recursion can often cause performance issues. One way to mitigate this is with a technique call memoization, we will also discuss here.
+
+Here is a simple recursive function called `factorial`, as you may expected, it calculates the factorial of a positive number:
 
 ```go
 import "fmt"
@@ -159,7 +161,7 @@ result := fib(6)
 
 This is very inefficient, for example, look how many times we calculate `fib(0)`!! We should only be doing that once! 
 
-**\*SIDE NOTE**: Another thing to notice is that while we seem to call `fib(4)` and `fib(5)` we only enter `fib(4)` - this is because we can't enter to `fib(5)` until we finish `fib(4)`. This is due to something called a call stack - which I will discuss more when I post about dynamic programming. ;)*
+***SIDE NOTE**: Another thing to notice is that while we seem to call `fib(4)` and `fib(5)` we only enter `fib(4)` - this is because we can't enter to `fib(5)` until we finish `fib(4)`. This is due to something called a call stack - which I will discuss more when I post about dynamic programming. ;)*
 
 ```go
 fmt.Printf("fib(6) = %d\n", result)
