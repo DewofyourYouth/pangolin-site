@@ -2,9 +2,10 @@
 title: Review of Recursion In Go - Part 1
 date: 2023-11-03T12:24:20.633Z
 description: A basic review of recursion and basic memoization
-draft: true
+draft: false
 showHero: true
 showComments: true
+thumbnail: /img/russian-dolls.jpeg
 tags:
   - news
 ---
