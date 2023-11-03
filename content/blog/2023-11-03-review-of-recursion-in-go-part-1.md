@@ -13,8 +13,6 @@ tags:
   - algorithms
   - tutorials
 ---
-### Algoritmd In Go - Part I
-
 This is a basic review of recursion for Go programmers. It was originally written in a Go Jupyter Notebook.
 
 #### **Recursion** - A function that calls itself.
