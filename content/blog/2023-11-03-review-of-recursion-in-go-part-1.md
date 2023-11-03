@@ -276,14 +276,6 @@ mfib(12) = 144
 mfib ran 23 times!
 ```
 
-```go
-mfib(50)
-```
-
-```
-12586269025
-```
-
 if we remove the incrementer statements and just time how long it takes to finish each function, we can see how much more time it takes to fun a fibonacci sequence on a slightly higher number like 35
 
 ```go
