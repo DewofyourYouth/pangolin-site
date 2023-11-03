@@ -19,7 +19,7 @@ This is a basic review of recursion for Go programmers. It was originally writte
 
 Recursive functions must have an exit clause, if they aren't going to be an infinite loop. The exit clause is the condition in which case the function should return a value and *not* call itself. Without one, the function will just call itself forever.
 
-Here is a simple recursive function called factorial, as you may expect it calculated the factorial of an input:
+Here is a simple recursive function called factorial, as you may expected, it calculates the factorial of an input:
 
 ```go
 import "fmt"
