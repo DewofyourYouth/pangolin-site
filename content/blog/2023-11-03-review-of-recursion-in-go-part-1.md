@@ -78,11 +78,6 @@ fmt.Sprintf("The fib function was run %d times!!!", times_run)
 
 ```
 fib(12) = 144
-
-
-
-
-
 The fib function was run 465 times!!!
 ```
 
