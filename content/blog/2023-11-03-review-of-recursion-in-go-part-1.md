@@ -1,5 +1,5 @@
 ---
-title: Review of Recursion In Go - Part 1
+title: Review of Algorithms In Go - Part 1
 date: 2023-11-03T12:24:20.633Z
 description: A basic review of recursion and basic memoization
 draft: false
@@ -13,9 +13,9 @@ tags:
   - algorithms
   - tutorials
 ---
-### Recursion In Go - Part I
+### Algoritmd In Go - Part I
 
-This is a basic review of recursion for programmers who program in Go. It was originally written in a Go Jupyter Notebook.
+This is a basic review of recursion for Go programmers. It was originally written in a Go Jupyter Notebook.
 
 **Recursion** - A function that calls itself.
 
