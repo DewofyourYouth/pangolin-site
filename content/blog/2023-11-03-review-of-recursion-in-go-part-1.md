@@ -85,14 +85,6 @@ fib(12) = 144
 The fib function was run 465 times!!!
 ```
 
-```go
-times_run
-```
-
-```
-465
-```
-
 In order to better understand this, lets run a modified function - with print statements for `fib(6)` - that equals 8 and should run 25 times:
 
 ```go
