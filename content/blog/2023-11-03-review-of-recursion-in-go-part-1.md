@@ -1,5 +1,5 @@
 ---
-title: Review of Algorithms In Go - Part 1
+title: Review of Algorithms In Go - Part 1 - Recursion
 date: 2023-11-03T12:24:20.633Z
 description: A basic review of recursion and basic memoization
 draft: false
@@ -159,7 +159,7 @@ result := fib(6)
 
 This is very inefficient, for example, look how many times we calculate `fib(0)`!! We should only be doing that once! 
 
-***SIDE NOTE**: Another thing to notice is that while we seem to call `fib(4)` and `fib(5)` we only enter `fib(4)` - this is because we can't enter to `fib(5)` until we finish `fib(4)`. This is due to something called a call stack - which I will discuss more when I post about dynamic programming. ;)*
+**\*SIDE NOTE**: Another thing to notice is that while we seem to call `fib(4)` and `fib(5)` we only enter `fib(4)` - this is because we can't enter to `fib(5)` until we finish `fib(4)`. This is due to something called a call stack - which I will discuss more when I post about dynamic programming. ;)*
 
 ```go
 fmt.Printf("fib(6) = %d\n", result)
