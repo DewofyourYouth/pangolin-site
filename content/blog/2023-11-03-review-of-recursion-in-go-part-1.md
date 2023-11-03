@@ -159,6 +159,10 @@ result := fib(6)
 	CALLING fib(1)
 ```
 
+This is very inefficient, for example, look how many times we calculate `fib(0)`!! We should only be doing that once! 
+
+Another thing to notice is that while we seem to call `fib(4)` and `fib(5)` we only enter `fib(4)` - this is because we can't enter to `fib(5)` until we finish `fib(4)`. This is due to something called a call stack - which I will discuss more when I post about dynamic programming. ;)
+
 ```go
 fmt.Printf("fib(6) = %d\n", result)
 fmt.Sprintf("Ran %d times!\n", i)
@@ -169,7 +173,7 @@ fib(6) = 8
 Ran 25 times!
 ```
 
-One method of reducing the amount of times the function is called is a method called memoization. Since the fibonacci of a number will always be the same, we don't need to repeat it each time. Here we can reduce the number of `fib(6)` from 25 to just 11!
+One method of reducing the amount of times the function is called is a method called memoization. Since the fibonacci of any given input number will always be the same, we don't need to repeat it each time. We can just map the result we get to the input the first time. If we've already calculated the fibonacci of any number, we just pull it out of our hash map instead of calculating it again. Here we can reduce the number of `fib(6)` from 25 to just 11!
 
 ```go
 mi := 0
@@ -218,6 +222,8 @@ mresult := mfib(6)
 10) ENTERED fibInner(3)
 11) ENTERED fibInner(4)
 ```
+
+``
 
 ```go
 fmt.Printf("mfib(6) = %d\n", mresult)
