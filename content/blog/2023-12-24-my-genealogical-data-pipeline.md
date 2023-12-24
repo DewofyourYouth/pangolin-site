@@ -2,7 +2,7 @@
 title: My Genealogical Data Pipeline
 date: 2023-12-24T11:07:10.781Z
 description: How I migrated data from a Aunt Ruth's notes to a neo4j database.
-draft: true
+draft: false
 showHero: true
 showComments: true
 thumbnail: /img/tree.jpeg
