@@ -9,4 +9,4 @@ thumbnail: /img/tree.jpeg
 tags:
   - news
 ---
-A while back I started doing some genealogical research as a kind of pastime.
+A while back I started doing some genealogical research as a kind of pastime. At some point during this journey, I discovered that my Great-Aunt Ruth's had kept a database of genealogical data in some old, proprietary software. I didn't have any desire to buy said software, so I asked if there was anyway that the data could be exported.
