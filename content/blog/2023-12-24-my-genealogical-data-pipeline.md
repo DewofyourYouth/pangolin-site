@@ -13,8 +13,6 @@ tags:
   - neo4j
   - graph database
 ---
-
-
 A while back I started doing some genealogical research as a kind of pastime. At some point during this journey, I discovered that my Great-Aunt Ruth's had kept a database of genealogical data in some old, proprietary software. I didn't have any desire to buy said software, so I asked if there was anyway that the data could be exported. My cousin, Dave, replied that it could exported as a gedcom file. He sent me such a file.
 
 A [gedcom](https://gedcom.io/about/) file (for a full explanation see link), is a format invented by the Mormon church to store genealogical data. It's plain text document that looks kind of like COBOL. It's rather inscrutable. 
@@ -113,8 +111,6 @@ Here's an example of an entry of a person with Aunt Ruth's notes in the datafram
 | ---- | --------------- | --------- | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | @I1@ | Avraham Gershel | Slutsky   | ... | The American great-grandchildren of Avraham Slutsky were told that their parents came from Russia. On all of the documents (e.g. marriage certificates, naturalization papers, death certificates) that we have, Russia is listed as their country of origin. However, Eugene Sloutsky who lives in Moscow and Mikhail Belikov, son of Chaya Ita Slutsky Belikov, (he also who lives in Moscow), tells us that the family came from Parafievka in Chernigov Gubernia, Ukraine. Teresa told her daughter that they came from Chernigov Gubernia... |
 
-
-
 Then I exported the the data frame to CSV file in my Google drive:
 
 ```python
@@ -194,7 +190,6 @@ CALL {
   MATCH (target: `Person` { `_id`: row.`father` })
   MERGE (source)-[r: `father`]->(target)
 } IN TRANSACTIONS OF 10000 ROWS;
-
 ```
 
 I then had all the people in my family loaded into a Neo4j graph database. But this is where my lack of experience with graph databases really came in.
