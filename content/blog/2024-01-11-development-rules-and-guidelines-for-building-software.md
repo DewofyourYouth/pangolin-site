@@ -1,6 +1,6 @@
 ---
 title: Development Rules and Guidelines For Building Software
-date: 2024-01-11T09:29:55.520Z
+date: 2024-01-11T11:24:34.635Z
 description: Some rules and guidelines I've discovered from my time developing
   software with teams.
 draft: false
