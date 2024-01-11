@@ -12,7 +12,7 @@ tags:
 ---
 This post started with me trying to write down some guidance for my current team, at some point I someone on my team suggested I should make it more broadly available. While this advice is from my person experience developing on team and managing development teams, it's not all original insights. I have been very influenced by [Martin Fowler's book "Refactoring".](https://martinfowler.com/books/refactoring.html) That book is a great read for anyone who wants to get a practical, straightforward introduction to the craft of writing sustainable code. Also, I enjoy the perspective of [the Grug Brained Developer](https://grugbrain.dev/) and that has likely influenced my approach. I've also benefitted greatly from the insights of [Brian Levy of BridgePort Digital](https://www.bridgeportdigital.com/meet-the-team). When in doubt, assume most of the best insights come from him 😉.\
 \
-I may make some follow up posts explaining each of, or particular guidelines. **Let me know in the comments** if that is something you'd like to read. Feel free to put out where you disagree or where it's not clear what I meant.
+I may make some follow up posts explaining each of, or particular guidelines. **Let me know in the comments** if that is something you'd like to read. Feel free to point out where you disagree or where it's not clear what I meant.
 
 - - -
 
