@@ -56,7 +56,7 @@ I will first list the guidelines and then provide explanations for reference as 
    3. When appropriate, separate the specific implementations from what you want your application to do.
 
       * The simplest way I know of to do this is via the use of the strategy pattern and dependency injection.
-   4. If you're software does not **currently** yet need to scale like Netflix, Google, etc - and you can't explain to me, **without using any of the following words**, or close synonyms, why something should be a micro-service, it probably should first be a monolith. The words are: 
+   4. If your product does not **currently** yet need to scale like Netflix, Google, etc - and you can't explain to me, **without using any of the following words**, or close synonyms, why something should be a micro-service, it probably should first be a monolith. The words are: 
 
       1. scaling 
       2. modern
@@ -66,3 +66,4 @@ I will first list the guidelines and then provide explanations for reference as 
       6. aws
       7. horizontal
       8. infrastructure
+   5. There is an exception to previous statement. This is when you've ignored all the other guidelines to the point where you system is *already totally ummanagable!* At that point, it may be easier to make a little external micro-service.**Explanation:** The reason for this insistence on the monolith is not that I am luddite, who is against the whole containers / docker / k8s innovations that we've invented for scaling systems. It's because I've found that it is always easier to break up a monolith into micro-services, once you've written the  code and understand the problem space. While I think this is true it is not always a compelling enough reason to start messing around with a legacy code base that is not well maintained and you don't know what else you'll break. You may find that you're spending too much time addressing other issues with the code base rather than working on the stuff you're supposed to accomplish.
