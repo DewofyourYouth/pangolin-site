@@ -1,5 +1,5 @@
 ---
-title: Integrating DecapCMS with Hugo and Blowfish Theme, Part 1
+title: Integrating DecapCMS with Hugo and Blowfish Theme
 date: 2023-10-24T16:30:37.705Z
 description: The journey of making this blog ;)
 draft: false
